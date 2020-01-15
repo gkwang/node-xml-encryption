@@ -9,19 +9,19 @@ describe('encrypt', function() {
     name: 'aes-256-cbc',
     encryptionOptions: {
       encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#aes256-cbc',
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
     }
   }, {
     name: 'aes-128-cbc',
     encryptionOptions: {
       encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#aes128-cbc',
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
     }
   }, {
     name: 'des-ede3-cbc',
     encryptionOptions: {
       encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#tripledes-cbc',
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5'
     }
   }];
 
@@ -91,10 +91,10 @@ describe('encrypt', function() {
       key: fs.readFileSync(__dirname + '/test-auth0.key'),
       disallowInsecureEncryptionAlgorithm: true,
       encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#aes128-cbc',
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
     }
       //options.encryptionAlgorithm = 'http://www.w3.org/2001/04/xmlenc#tripledes-cbc',
-      //options.keyEncryptionAlgorighm = 'http://www.w3.org/2001/04/xmlenc#rsa-1_5';
+      //options.keyEncryptionAlgorithm = 'http://www.w3.org/2001/04/xmlenc#rsa-1_5';
       xmlenc.encrypt('encrypt me', options, function(err, result) {
         assert(err);
         done();
@@ -107,7 +107,7 @@ describe('encrypt', function() {
       pem: fs.readFileSync(__dirname + '/test-auth0.pem'),
       key: fs.readFileSync(__dirname + '/test-auth0.key'),
       encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#aes128-cbc',
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
       }
       xmlenc.encrypt('encrypt me', options, function(err, result) {
         xmlenc.decrypt(result,
@@ -126,7 +126,7 @@ describe('encrypt', function() {
     var options = {
       rsa_pub: fs.readFileSync(__dirname + '/test-auth0_rsa.pub'),
       pem: fs.readFileSync(__dirname + '/test-auth0.pem'),
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p'
     };
 
     var plaintext = 'The quick brown fox jumps over the lazy dog';
@@ -165,7 +165,7 @@ describe('encrypt', function() {
     var options = {
       rsa_pub: fs.readFileSync(__dirname + '/test-auth0_rsa.pub'),
       pem: fs.readFileSync(__dirname + '/test-auth0.pem'),
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5',
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5',
       disallowInsecureEncryptionAlgorithm: true
     };
 
@@ -181,7 +181,7 @@ describe('encrypt', function() {
     var options = {
       rsa_pub: fs.readFileSync(__dirname + '/test-auth0_rsa.pub'),
       pem: fs.readFileSync(__dirname + '/test-auth0.pem'),
-      keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5'
+      keyEncryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#rsa-1_5'
     };
 
     var plaintext = 'The quick brown fox jumps over the lazy dog';
