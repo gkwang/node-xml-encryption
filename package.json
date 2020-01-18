@@ -19,15 +19,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "escape-html": "^1.0.3",
-    "node-forge": "^0.7.0",
-    "xmldom": "~0.1.15",
+    "escape-html": "1.0.3",
+    "node-forge": "^0.9.1",
+    "xmldom": "0.2.1",
     "xpath": "0.0.27"
   },
   "scripts": {
     "test": "mocha"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   }
 }
